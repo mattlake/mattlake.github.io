@@ -1,16 +1,16 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <title>Matthew Lake</title>
-    <link href="https://jigsaw-blog-template.tighten.co/blog" />
-    <link type="application/atom+xml" rel="self" href="https://jigsaw-blog-template.tighten.co/blog/feed.atom" />
-    <updated>2023-01-22T20:44:46+00:00</updated>
-    <id>https://jigsaw-blog-template.tighten.co/blog/feed.atom</id>
+    <link href="https://mattlake.codes/blog" />
+    <link type="application/atom+xml" rel="self" href="https://mattlake.codes/blog/feed.atom" />
+    <updated>2023-01-22T21:03:06+00:00</updated>
+    <id>https://mattlake.codes/blog/feed.atom</id>
     <author>
         <name>Matthew Lake</name>
     </author>
                 <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/tiptap-tutorial</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/tiptap-tutorial" />
+    <id>https://mattlake.codes/blog/tiptap-tutorial</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/tiptap-tutorial" />
     <title>How To Implement a TipTap WYSIWYG Editor in Laravel Livewire</title>
     <published>2021-07-25T00:00:00+00:00</published>
     <updated>2021-07-25T00:00:00+00:00</updated>
@@ -409,8 +409,8 @@ module.exports = {
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/getting-started</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/getting-started" />
+    <id>https://mattlake.codes/blog/getting-started</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/getting-started" />
     <title>Getting Started</title>
     <published>2018-12-25T00:00:00+00:00</published>
     <updated>2018-12-25T00:00:00+00:00</updated>
@@ -484,8 +484,8 @@ npm run dev
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/customizing-your-site</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/customizing-your-site" />
+    <id>https://mattlake.codes/blog/customizing-your-site</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/customizing-your-site" />
     <title>Customizing Your Site</title>
     <published>2018-12-24T00:00:00+00:00</published>
     <updated>2018-12-24T00:00:00+00:00</updated>
@@ -590,8 +590,8 @@ npm run dev
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/custom-404-page</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/custom-404-page" />
+    <id>https://mattlake.codes/blog/custom-404-page</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/custom-404-page" />
     <title>Custom 404 Pages</title>
     <published>2018-12-23T00:00:00+00:00</published>
     <updated>2018-12-23T00:00:00+00:00</updated>
@@ -633,8 +633,8 @@ Depending on where your site is hosted, you may need to......</summary>
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/fuse-search</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/fuse-search" />
+    <id>https://mattlake.codes/blog/fuse-search</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/fuse-search" />
     <title>Fuse Search</title>
     <published>2018-12-22T00:00:00+00:00</published>
     <updated>2018-12-22T00:00:00+00:00</updated>
@@ -651,8 +651,8 @@ Depending on where your site is hosted, you may need to......</summary>
     ]]></content>
 </entry>
             <entry>
-    <id>https://jigsaw-blog-template.tighten.co/blog/mailchimp-newsletters</id>
-    <link type="text/html" rel="alternate" href="https://jigsaw-blog-template.tighten.co/blog/mailchimp-newsletters" />
+    <id>https://mattlake.codes/blog/mailchimp-newsletters</id>
+    <link type="text/html" rel="alternate" href="https://mattlake.codes/blog/mailchimp-newsletters" />
     <title>Mailchimp Newsletters</title>
     <published>2018-11-21T00:00:00+00:00</published>
     <updated>2018-11-21T00:00:00+00:00</updated>

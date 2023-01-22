@@ -3,8 +3,8 @@
 use Illuminate\Support\Str;
 
 return [
-    'baseUrl' => 'http://mattlake.codes',
-    'production' => true,
+    'baseUrl' => '',
+    'production' => false,
     'siteName' => 'Matthew Lake',
     'siteDescription' => 'My BLog',
     'siteAuthor' => 'Matthew Lake',
