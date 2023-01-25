@@ -2,14 +2,14 @@
     <ul class="my-0">
         <li class="pl-4">
             <a
-                title="{{ $page->siteName }} Blog"
+                title="{{ $page->siteName }} My Blog"
                 href="/blog"
                 class="block mt-0 mb-4 text-sm no-underline {{ $page->isActive('/blog') ? 'active text-blue-500' : 'text-gray-800 hover:text-blue-500' }}"
             >Blog</a>
         </li>
         <li class="pl-4">
             <a
-                title="{{ $page->siteName }} About"
+                title="{{ $page->siteName }} About Me"
                 href="/about"
                 class="block mt-0 mb-4 text-sm no-underline {{ $page->isActive('/about') ? 'active text-blue-500' : 'text-gray-800 hover:text-blue-500' }}"
             >About</a>
