@@ -31,7 +31,7 @@
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
                         <span class="block mr-3 h-12 w-12 rounded-full overflow-hidden"><img src="/assets/img/profile_img.png" alt="Matt Lake portrait"></span>
-                        <h1 class="text-lg md:text-2xl text-teal-500 font-semibold hover:text-blue-600 my-0">{{ $page->siteName }}</h1>
+                        <h1 class="text-lg md:text-2xl text-teal-500 font-semibold hover:text-blue-800 my-0">{{ $page->siteName }}</h1>
                     </a>
                 </div>
 
@@ -58,8 +58,8 @@
                 </li>
 
                 <li>
-                    <a href="https://twitter.com/domattr">Twitter</a>
-                    <a href="https://hachyderm.io/@mattlake">Mastodon</a>
+                    <a href="https://twitter.com/domattr" class="text-teal-500">Twitter</a>
+                    <a href="https://hachyderm.io/@mattlake" class="text-teal-500">Mastodon</a>
                 </li>
             </ul>
         </footer>

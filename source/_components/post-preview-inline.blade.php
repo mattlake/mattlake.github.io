@@ -7,7 +7,7 @@
         <a
             href="{{ $post->getUrl() }}"
             title="Read more - {{ $post->title }}"
-            class="text-gray-900 font-extrabold"
+            class="text-gray-900 font-extrabold hover:text-teal-500"
         >{{ $post->title }}</a>
     </h2>
 
@@ -16,6 +16,6 @@
     <a
         href="{{ $post->getUrl() }}"
         title="Read more - {{ $post->title }}"
-        class="uppercase font-semibold tracking-wide mb-2"
+        class="uppercase font-semibold tracking-wide mb-2 text-teal-500"
     >Read</a>
 </div>
