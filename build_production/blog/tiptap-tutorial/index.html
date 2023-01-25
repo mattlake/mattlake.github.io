@@ -20,7 +20,7 @@
                     <!-- Insert analytics code here -->
         
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
-        <link rel="stylesheet" href="/assets/build/css/main.css?id=c45bf89709288fa3b585ea83bb000594">
+        <link rel="stylesheet" href="/assets/build/css/main.css?id=3d3f8a91fe05acbfa6be7194138e19cf">
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
@@ -29,7 +29,7 @@
                 <div class="flex items-center">
                     <a href="/" title="Matthew Lake home" class="inline-flex items-center">
                         <span class="block mr-3 h-12 w-12 rounded-full overflow-hidden"><img src="/assets/img/profile_img.png" alt="Matt Lake portrait"></span>
-                        <h1 class="text-lg md:text-2xl text-teal-500 font-semibold hover:text-blue-600 my-0">Matthew Lake</h1>
+                        <h1 class="text-lg md:text-2xl text-teal-500 font-semibold hover:text-blue-800 my-0">Matthew Lake</h1>
                     </a>
                 </div>
 
@@ -39,16 +39,16 @@
                     <nav class="hidden lg:flex items-center justify-end text-lg">
     <a title="Matthew Lake Blog" href="/blog"
         class="ml-6 text-gray-700 hover:text-blue-600 ">
-        Blog
+        My Blog
     </a>
 
     <a title="Matthew Lake About" href="/about"
         class="ml-6 text-gray-700 hover:text-blue-600 ">
-        About
+        About Me
     </a>
 </nav>
 
-                    <button class="flex justify-center items-center bg-blue-500 border border-blue-500 h-10 px-5 rounded-full lg:hidden focus:outline-none"
+                    <button class="flex justify-center items-center bg-teal-500 border border-teal-500 h-10 px-5 rounded-full lg:hidden focus:outline-none"
     onclick="navMenu.toggle()"
 >
     <svg id="js-nav-menu-show" xmlns="http://www.w3.org/2000/svg"
@@ -72,24 +72,17 @@
     <ul class="my-0">
         <li class="pl-4">
             <a
-                title="Matthew Lake Blog"
+                title="Matthew Lake My Blog"
                 href="/blog"
                 class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
             >Blog</a>
         </li>
         <li class="pl-4">
             <a
-                title="Matthew Lake About"
+                title="Matthew Lake About Me"
                 href="/about"
                 class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
             >About</a>
-        </li>
-        <li class="pl-4">
-            <a
-                title="Matthew Lake Contact"
-                href="/contact"
-                class="block mt-0 mb-4 text-sm no-underline text-gray-800 hover:text-blue-500"
-            >Contact</a>
         </li>
     </ul>
 </nav>
@@ -488,9 +481,6 @@ module.exports = {
 
     <nav class="flex justify-between text-sm md:text-base">
         <div>
-                            <a href="https://mattlake.codes/blog/getting-started" title="Older Post: Getting Started">
-                    &LeftArrow; Getting Started
-                </a>
                     </div>
 
         <div>
@@ -501,12 +491,12 @@ module.exports = {
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center list-none">
                 <li class="md:mr-2">
-                    &copy; <a href="https://tighten.co" title="Tighten website">Tighten</a> 2023.
+                    &copy; Matthew Lake 2023.
                 </li>
 
                 <li>
-                    Built with <a href="http://jigsaw.tighten.co" title="Jigsaw by Tighten">Jigsaw</a>
-                    and <a href="https://tailwindcss.com" title="Tailwind CSS, a utility-first CSS framework">Tailwind CSS</a>.
+                    <a href="https://twitter.com/domattr" class="text-teal-500">Twitter</a>
+                    <a href="https://hachyderm.io/@mattlake" class="text-teal-500">Mastodon</a>
                 </li>
             </ul>
         </footer>
