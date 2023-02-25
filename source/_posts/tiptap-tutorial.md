@@ -6,6 +6,7 @@ date: 2021-07-25
 description: How To Implement a TipTap WYSIWYG Editor in Laravel Livewire.
 cover_image: /assets/img/posts/typewriter_header.svg
 featured: true
+categories: ['php','laravel']
 ---
 
 In this article, I am going to show you how to build a simple application that implements a [TipTap](https://www.tiptap.dev/) editor into a [Livewire](https://laravel-livewire.com) component.

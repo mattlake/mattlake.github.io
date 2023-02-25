@@ -6,6 +6,7 @@ date: 2023-02-13
 description: How to use scoped services in background services and other singletons.
 cover_image: /assets/img/posts/code_inspection_header.svg
 featured: true
+categories: ['dotnet']
 ---
 
 I have recently been creating a few background services/hosted services in my .NET apps to use message consumers. Something I have come across a few times is the ability to use scoped services, such as Entity Framework contexts, in these services as they are registered as singletons. All code related to this article can be found [on github here](#https://github.com/mattlake/ScopingExample)
