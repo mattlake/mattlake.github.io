@@ -60,6 +60,7 @@
                 <li>
                     <a href="https://twitter.com/domattr" class="text-teal-500">Twitter</a>
                     <a href="https://hachyderm.io/@mattlake" class="text-teal-500">Mastodon</a>
+                    <a href="https://www.linkedin.com/in/matthew-lake-7b4a7867/" class="text-teal-500">LinkedIn</a>
                 </li>
             </ul>
         </footer>
