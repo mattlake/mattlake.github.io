@@ -3,7 +3,7 @@
     "scripts": {
         "dev": "mix",
         "watch": "mix watch",
-        "prod": "mix --production"
+        "prod": "mix --production && echo 'mattlake.codes' > ./build_production/CNAME"
     },
     "devDependencies": {
         "axios": "^0.21.1",
