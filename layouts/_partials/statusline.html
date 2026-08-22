@@ -1,0 +1,35 @@
+{{ $mode := "NORMAL" }}
+{{ $path := "~/" }}
+{{ $hint := "g d devlog &middot; g b blog &middot; ? keys" }}
+{{ $pos  := "top" }}
+{{ if .IsHome }}
+{{ else if and .IsPage (eq .Section "blog") }}
+  {{ $mode = "READ" }}
+  {{ $path = printf "~/blog/%s" (.Date.Format "2006-01-02") }}
+  {{ $hint = "esc back &middot; ? keys" }}
+  {{ $pos  = "100%" }}
+{{ else if and .IsPage (eq .Section "devlog") }}
+  {{ $mode = "LOG" }}
+  {{ $path = printf "~/devlog/%s" (.Date.Format "2006-01-02") }}
+  {{ $hint = "esc back &middot; ? keys" }}
+  {{ $pos  = "100%" }}
+{{ else if hasPrefix .RelPermalink "/about" }}
+  {{ $path = "~/about.md" }}
+  {{ $hint = "g h home &middot; ? keys" }}
+{{ else if eq .Kind "term" }}
+  {{ $path = printf "~/blog/categories/%s/" .Data.Term }}
+  {{ $hint = "j/k move &middot; enter open &middot; ? keys" }}
+  {{ $pos  = printf "1/%d" (len .Pages) }}
+{{ else }}
+  {{ $path = printf "~/%s/" .Section }}
+  {{ $hint = "j/k move &middot; enter open &middot; ? keys" }}
+  {{ $pos  = printf "1/%d" (len .Pages) }}
+{{ end }}
+<footer class="status">
+  <span class="status__mode">{{ $mode }}</span>
+  <span class="status__path">{{ $path }}</span>
+  <span class="status__gap"></span>
+  <span class="status__pending" data-pending hidden>g</span>
+  <span class="status__hint">{{ $hint | safeHTML }}</span>
+  <span class="status__pos" data-pos>{{ $pos }}</span>
+</footer>

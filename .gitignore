@@ -1,5 +1,4 @@
-/build_local/
-/node_modules/
-/source/assets/build/
-/vendor/
+/public/
+/resources/
+.hugo_build.lock
 .DS_Store

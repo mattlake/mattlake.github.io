@@ -1,0 +1,18 @@
+{{ $active := "" }}
+{{ if .IsHome }}{{ $active = "home" }}
+{{ else if eq .Section "blog" }}{{ $active = "blog" }}
+{{ else if eq .Section "devlog" }}{{ $active = "devlog" }}
+{{ else if hasPrefix .RelPermalink "/about" }}{{ $active = "about" }}{{ end }}
+{{ $tabs := slice
+  (dict "key" "home"   "n" "1" "label" "home"   "url" "/")
+  (dict "key" "blog"   "n" "2" "label" "blog"   "url" "/blog/")
+  (dict "key" "devlog" "n" "3" "label" "devlog" "url" "/devlog/")
+  (dict "key" "about"  "n" "4" "label" "about"  "url" "/about/") }}
+<nav class="tabbar">
+  <span class="tabbar__user"><span class="dot">&#9679;</span>matt@lake</span>
+  {{ range $tabs }}
+    <a class="tab{{ if eq $active .key }} is-active{{ end }}" href="{{ .url }}"><span class="tab__n">{{ .n }}</span><span>{{ .label }}</span></a>
+  {{ end }}
+  <span class="tabbar__gap"></span>
+  <button class="tab tab--help" type="button" data-help-toggle>? keys</button>
+</nav>

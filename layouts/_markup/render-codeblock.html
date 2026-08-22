@@ -1,0 +1,13 @@
+{{- $lang := or .Type "text" -}}
+{{- $labels := dict "csharp" "C#" "cs" "C#" "js" "JavaScript" "javascript" "JavaScript" "php" "PHP" "html" "HTML" "css" "CSS" "sh" "shell" "bash" "shell" "yaml" "YAML" "json" "JSON" "toml" "TOML" "blade" "Blade" "text" "" -}}
+{{- $label := index $labels $lang | default $lang -}}
+{{- $file := .Attributes.file -}}
+<div class="codeblock">
+  {{- if or $file $label }}
+  <div class="codeblock__head">
+    <span>{{ with $file }}{{ . }}{{ end }}</span>
+    <span>{{ $label }}</span>
+  </div>
+  {{- end }}
+  {{ transform.Highlight (trim .Inner "\n") $lang }}
+</div>

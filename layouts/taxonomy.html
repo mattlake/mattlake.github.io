@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="prompt"><span class="prompt__sigil">$</span> ls categories/</div>
+  <h1 class="listtitle">Categories</h1>
+  <p class="listsub">Every tag used across the blog.</p>
+  <div class="rows" data-rows>
+    {{ range .Pages }}
+      <a class="row row--term" href="{{ .RelPermalink }}" data-row>
+        <span class="row__marker">&#9656;</span>
+        <span class="row__title">#{{ .Title }}</span>
+        <span class="row__tag">{{ len .Pages }}</span>
+      </a>
+    {{ end }}
+  </div>
+{{ end }}

@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <div class="entry">
+    <a class="back" href="/devlog/">&larr; devlog</a>
+    <div class="entry__meta">
+      <span class="entry__date">{{ .Date.Format "2006-01-02" }}</span>
+      {{ range .Params.tags }}<span class="entry__tag">#{{ . }}</span>{{ end }}
+    </div>
+    <h1 class="entry__title">{{ .Title }}</h1>
+    <div class="prose prose--entry">{{ .Content }}</div>
+    {{ with .Params.note }}
+      <div class="todo"><span class="todo__label">TODO</span><span>{{ . }}</span></div>
+    {{ end }}
+  </div>
+{{ end }}

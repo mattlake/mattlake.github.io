@@ -1,0 +1,6 @@
+{{ define "main" }}
+  <div class="prompt"><span class="prompt__sigil">$</span> ls -lt posts/ | grep {{ .Data.Term }}</div>
+  <h1 class="listtitle">#{{ .Data.Term }}</h1>
+  <p class="listsub">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }} tagged {{ .Data.Term }}.</p>
+  {{ partial "rows.html" (dict "pages" .Pages) }}
+{{ end }}

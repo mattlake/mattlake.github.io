@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{  site.Language.Locale | default "en-gb" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{ $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
+  <title>{{ $title }}</title>
+  {{ $desc := or .Description .Summary site.Params.description }}
+  <meta name="description" content="{{ $desc | plainify | truncate 200 }}">
+  <meta property="og:title" content="{{ $title }}">
+  <meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:description" content="{{ $desc | plainify | truncate 200 }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.Title }} — blog" href="/blog/feed.atom">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.Title }} — devlog" href="/devlog/feed.atom">
+
+  <link rel="preload" href="/fonts/jetbrains-mono.woff2" as="font" type="font/woff2" crossorigin>
+  {{ $css := resources.Get "css/main.css" | resources.Minify | resources.Fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body>
+  {{ partial "tabbar.html" . }}
+
+  <main class="col{{ with .Params.colClass }} {{ . }}{{ end }}">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  {{ partial "help.html" . }}
+  {{ partial "statusline.html" . }}
+
+  {{ $js := resources.Get "js/keys.js" | resources.Minify | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+</body>
+</html>

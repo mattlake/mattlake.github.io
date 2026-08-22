@@ -1,0 +1,40 @@
+{{ define "main" }}
+  <div class="prompt"><span class="prompt__tilde">~</span> whoami</div>
+  <h1 class="name">{{ site.Title }}<span class="cursor">_</span></h1>
+  <p class="intro">{{ site.Params.intro }}</p>
+  <div class="links">
+    <a href="{{ site.Params.github }}">github</a>
+    <a href="{{ site.Params.mastodon }}" rel="me">mastodon</a>
+    <a href="/blog/feed.atom">rss</a>
+  </div>
+
+  {{ $logs := where site.RegularPages "Section" "devlog" }}
+  {{ if $logs }}
+    {{ partial "section-head.html" (dict "cmd" "ls devlog --recent" "url" "/devlog/") }}
+    <div class="loglist">
+      {{ range first 4 $logs }}
+        <a class="logrow" href="{{ .RelPermalink }}">
+          <span class="logrow__date">{{ .Date.Format "2006-01-02" }}</span>
+          <span class="logrow__title">{{ .Title }}</span>
+          <span class="logrow__tag">{{ index .Params.tags 0 }}</span>
+        </a>
+      {{ end }}
+    </div>
+  {{ end }}
+
+  {{ partial "section-head.html" (dict "cmd" "ls posts" "url" "/blog/") }}
+  <div class="postlist">
+    {{ range first 6 (where site.RegularPages "Section" "blog") }}
+      <div class="postrow">
+        <div class="postrow__date">{{ .Date.Format "2006-01-02" }}</div>
+        <div>
+          <a class="postrow__title" href="{{ .RelPermalink }}">{{ .Title }}</a>
+          <p class="postrow__blurb">{{ or .Params.summary .Summary }}</p>
+          <div class="postrow__tags">
+            {{ range .Params.tags }}<span>#{{ . }}</span>{{ end }}
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

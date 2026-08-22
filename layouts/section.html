@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <div class="prompt"><span class="prompt__sigil">$</span> {{ .Params.cmd | default (printf "ls -lt %s/" .Section) }}</div>
+  <h1 class="listtitle">{{ .Title }}</h1>
+  <p class="listsub">{{ .Params.subtitle }}</p>
+  {{ if .Pages }}
+    {{ partial "rows.html" (dict "pages" .Pages) }}
+  {{ else }}
+    <p class="empty"><span class="prompt__sigil">$</span> total 0 &mdash; nothing here yet.</p>
+  {{ end }}
+{{ end }}

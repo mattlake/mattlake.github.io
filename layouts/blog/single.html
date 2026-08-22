@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <article class="article">
+    <a class="back" href="/blog/">&larr; back</a>
+    <div class="meta">
+      <span>{{ .Date.Format "2006-01-02" }}</span>
+      <span class="meta__sep">&middot;</span>
+      <span>{{ .ReadingTime }} min</span>
+      {{ range .Params.tags }}
+        <span class="meta__sep">&middot;</span>
+        <a class="meta__tag" href="/blog/categories/{{ . | urlize }}/">#{{ . }}</a>
+      {{ end }}
+    </div>
+    <h1 class="article__title">{{ .Title }}</h1>
+    <div class="prose">{{ .Content }}</div>
+  </article>
+{{ end }}

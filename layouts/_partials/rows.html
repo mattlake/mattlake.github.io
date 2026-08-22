@@ -1,0 +1,10 @@
+<div class="rows" data-rows>
+  {{ range $i, $p := .pages }}
+    <a class="row{{ if eq $i 0 }} is-sel{{ end }}" href="{{ $p.RelPermalink }}" data-row>
+      <span class="row__marker">&#9656;</span>
+      <span class="row__date">{{ $p.Date.Format "2006-01-02" }}</span>
+      <span class="row__title">{{ $p.Title }}</span>
+      <span class="row__tag">{{ with $p.Params.tags }}{{ index . 0 }}{{ end }}</span>
+    </a>
+  {{ end }}
+</div>

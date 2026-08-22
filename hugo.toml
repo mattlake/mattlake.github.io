@@ -1,0 +1,50 @@
+baseURL = "https://mattlake.codes/"
+locale = "en-gb"
+title = "Matthew Lake"
+copyright = "Matthew Lake"
+enableRobotsTXT = true
+enableEmoji = false
+
+# Preserve the URLs the Jigsaw site published, so nothing 404s.
+#   /blog/<slug>/              posts            (Hugo default)
+#   /blog/categories/<tag>/    tag pages        (permalinks below)
+#   /blog/feed.atom            feed             (outputFormats below)
+[permalinks]
+  [permalinks.term]
+    tags = "/blog/categories/:slug/"
+
+[taxonomies]
+  tag = "tags"
+
+[params]
+  description = "Backend developer. .NET, PHP, Laravel. Long-form posts and a running devlog."
+  intro = "Backend developer. .NET, PHP, Laravel. I write about the things I hit while building, and keep a running devlog of work in progress."
+  github = "https://github.com/mattlake"
+  mastodon = "https://hachyderm.io/@mattlake"
+  linkedin = "https://www.linkedin.com/in/matthew-lake-7b4a7867/"
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+    tabWidth = 4
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[mediaTypes."application/atom+xml"]
+  suffixes = ["atom"]
+
+[outputFormats.atom]
+  mediaType = "application/atom+xml"
+  baseName = "feed"
+  isPlainText = false
+  rel = "alternate"
+
+[outputs]
+  home = ["html"]
+  section = ["html", "atom"]
+  term = ["html"]
+  taxonomy = ["html"]
+
+[services.rss]
+  limit = 30

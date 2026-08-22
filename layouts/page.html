@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <div class="prompt"><span class="prompt__sigil">$</span> cat {{ .File.ContentBaseName }}.md</div>
+  <h1 class="listtitle">{{ .Title }}</h1>
+  <div class="prose prose--about">{{ .Content }}</div>
+  {{ with .Params.specs }}
+    <div class="specs">
+      {{ range . }}
+        <span class="specs__label">{{ .label }}</span>
+        <span{{ if .accent }} class="specs__accent"{{ end }}>{{ .value }}</span>
+      {{ end }}
+      <span class="specs__label">elsewhere</span>
+      <span>
+        <a href="{{ site.Params.github }}">github</a>,
+        <a href="{{ site.Params.mastodon }}" rel="me">mastodon</a>,
+        <a href="{{ site.Params.linkedin }}">linkedin</a>
+      </span>
+    </div>
+  {{ end }}
+{{ end }}
