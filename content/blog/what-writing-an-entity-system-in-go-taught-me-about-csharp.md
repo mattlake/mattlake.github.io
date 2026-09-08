@@ -1,5 +1,9 @@
 ---
 title: "What Writing an Entity System in Go Taught Me About C#"
+slug: "what-writing-an-entity-system-in-go-taught-me-about-csharp"
+aliases:
+  - "/blog/what-writing-an-entity-system-in-go-taught-me-about-c#/"
+  - "/blog/what-writing-an-entity-system-in-go-taught-me-about-c%23/"
 date: 2026-09-05
 tags: ["go", "gamedev"]
 summary: "A pointer to an entity seemed like the obvious thing to hand out. It was not, and working out why sent me back to the C# documentation rather than the Go."

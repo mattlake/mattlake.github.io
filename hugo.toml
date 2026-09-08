@@ -17,10 +17,10 @@ enableEmoji = false
   tag = "tags"
 
 [params]
-  description = "Backend developer. .NET, PHP, Laravel. Long-form posts and a running devlog."
-  intro = "Backend developer. .NET, PHP, Laravel. I write about the things I hit while building, and keep a running devlog of work in progress."
+  description = "Software developer. c#, .NET and Go. Long-form posts and a running devlog."
+  intro = "Software developer. c# and .NET by day, Go in the evenings. I write about the things I hit while building, and keep a running devlog of work in progress."
   github = "https://github.com/mattlake"
-  mastodon = "https://hachyderm.io/@mattlake"
+  bluesky = "https://bsky.app/profile/mattlake.codes"
   linkedin = "https://www.linkedin.com/in/matthew-lake-7b4a7867/"
 
 [markup]

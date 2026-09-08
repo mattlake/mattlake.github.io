@@ -12,5 +12,16 @@
     </div>
     <h1 class="article__title">{{ .Title }}</h1>
     <div class="prose">{{ .Content }}</div>
+    <div class="meta article__footer">
+      <span>elsewhere</span>
+      <span class="meta__sep">&middot;</span>
+      <a href="{{ site.Params.github }}">github</a>
+      <span class="meta__sep">&middot;</span>
+      <a href="{{ site.Params.bluesky }}" rel="me">bluesky</a>
+      <span class="meta__sep">&middot;</span>
+      <a href="{{ site.Params.linkedin }}">linkedin</a>
+      <span class="meta__sep">&middot;</span>
+      <a href="/blog/feed.atom">rss</a>
+    </div>
   </article>
 {{ end }}

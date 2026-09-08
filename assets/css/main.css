@@ -204,6 +204,7 @@ a:hover { color: var(--lavender); text-decoration: underline; }
 .meta__sep { color: var(--surface1); }
 .meta__tag { color: var(--mauve); }
 .meta__tag:hover { color: var(--mauve); }
+.article__footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--surface0); }
 .article__title {
   font-family: var(--sans);
   font-size: 36px;
